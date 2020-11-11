@@ -1,0 +1,30 @@
+// Importing Initial Variables
+
+@import "node_modules/bulma/sass/utilities/initial-variables";
+
+// Setting our own variables
+
+$black: #000000;
+$white: #ffffff;
+$cyan: #CEC7B1;
+$red: #ff0066;
+$purple: #885CA8;
+$blue: #00A0D7;
+$green: #92D050;
+
+
+
+$family-sans-serif: "Trebuchet MS", Arial, sans-serif !default;
+
+// Set derived variables
+
+$primary: $blue !default;
+$info: $purple !default;
+$success: $green !default;
+$danger: $red !default;
+
+
+
+// Import the rest of Bulma
+
+@import "node_modules/bulma/bulma";

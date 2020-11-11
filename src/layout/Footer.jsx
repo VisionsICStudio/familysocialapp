@@ -1,6 +1,6 @@
 /*
 ; =======================================================
-; Title: FooterComponent.js - familysocialapp - layout folder 
+; Title: Footer.js - familysocialapp - layout folder 
 ; Authors: Aaron Wilson
 ; Instructor: Sean Bernath
 ; Date: 08 November 2020
@@ -10,16 +10,18 @@
 ; =======================================================
 */
 
-import React from 'react'
+import React from 'react';
 
-const FooterComponent = () => {
+import { footStyle, h6Style } from './CSS';
+
+const Footer = () => {
   return (
     <div>
-      <footer>
-        <h1> Footer </h1>
+      <footer style={ footStyle } >
+        <h6 style={ h6Style } > <small> &copy; Copyright 2020, Full Sail Project </small> </h6>
       </footer>
     </div>
   )
 }
 
-export default FooterComponent;
+export default Footer;
