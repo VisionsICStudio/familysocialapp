@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from './layout/Header';
+import Login from './pages/Login'
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
@@ -16,6 +17,9 @@ function App() {
       <Header />
       <div className="container mt-2" style={ globalPosition } >
         <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/register">
             <Register />
           </Route>

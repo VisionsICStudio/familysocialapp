@@ -68,10 +68,11 @@ export const mottoStyle = {
 
 export const linkStyle = {
   position: 'relative',
-  top: '50px',
+  top: '90px',
   backgroundColor: '#92D050',
   textDecoration: 'none',
   color: '#000000',
+  fontWeight: 'bold',
   height: '40px',
   width: '245px'
 }

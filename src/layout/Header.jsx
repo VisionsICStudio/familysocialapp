@@ -8,15 +8,12 @@ const Header = ({ history }) => {
 
   const isAuth = !!localStorage.getItem("token");
 
-  const loginUser = () => {
-    localStorage.setItem("token", "some-login-token");
-    history.push("/profile/fullsailstudent");
-  };
-
   const logoutUser = () => {
     localStorage.removeItem("token");
     history.push("/");
   };
+
+  const token = '/dashboard/fullsailstudent';
 
   return (
     <nav className="navbar is-white shadow p-3 mb-5 bg-white rounded" style={ headerStyle } role="navigation" aria-label="main navigation">
@@ -42,26 +39,26 @@ const Header = ({ history }) => {
                 {!isAuth ? (
                   <>
                     <NavLink className="button is-info" activeClassName="is-active" to="/" exact>
-                      Home
+                    Home
                     </NavLink>
                   
                     <NavLink className="button is-info" activeClassName="is-active" to="/about">
-                      About
+                    About
                     </NavLink>
                   
-                    <button className="button is-success" type="button" onClick={loginUser}>
-                      Log in
-                    </button>
+                    <NavLink className="button is-success" activeClassName="is-active" to="/login">
+                    Log in
+                    </NavLink>
                   </>
                 ) : (
                   <>
                     <NavLink className="button is-info" activeClassName="is-active" to="/profile/fullsailstudent">
-                    Dashbuard
-                    </NavLink>
-                    <NavLink className="button is-info" activeClassName="is-active" to="/profile/fullsailstudent">
                     Profile
                     </NavLink>
-                    <button className="button is-danger" type="button" onClick={logoutUser}>
+                    <NavLink className="button is-info" activeClassName="is-active" to="/blog/fullsailstudent">
+                    Blog
+                    </NavLink>
+                    <button className="button is-danger logoutBtn" type="button" onClick={logoutUser}>
                     Log out
                     </button>
                   </>
