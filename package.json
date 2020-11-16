@@ -17,6 +17,7 @@
     "bulma": "^0.9.1",
     "file-loader": "^6.2.0",
     "font-awesome": "^4.7.0",
+    "immer": "^7.0.14",
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
@@ -32,10 +33,14 @@
     "react-scripts": "4.0.0",
     "react-svg": "^11.1.1",
     "reactstrap": "^8.7.1",
+    "redux": "^4.0.5",
     "sass": "^1.29.0",
     "uuid": "^8.3.1",
     "web-vitals": "^0.2.4",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
     "start": "react-scripts start",

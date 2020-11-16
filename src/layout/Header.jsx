@@ -1,20 +1,21 @@
-import React, { useState } from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import React, { Component, useState } from 'react';
+import { NavLink, withRouter } from 'react-router-dom';
+import { StoredUsers } from '../pages/Register';
 import logo from '../fs-logo.png';
 import { logoStyle, headerStyle } from './CSS'
 
 const Header = ({ history }) => {
   const [isOpen, setOpen] = useState(false);
-
-  const isAuth = !!localStorage.getItem("token");
+  const token = '/dashboard/fullsailstudent';
 
   const logoutUser = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem('token');
     history.push("/");
   };
 
-  const token = '/dashboard/fullsailstudent';
-
+ 
+  const isAuth = token;
+  
   return (
     <nav className="navbar is-white shadow p-3 mb-5 bg-white rounded" style={ headerStyle } role="navigation" aria-label="main navigation">
       <div className="container">
@@ -71,5 +72,14 @@ const Header = ({ history }) => {
     </nav>
   );
 };
+
+class ActiveUser extends Component {
+  constructor (props) {
+    super();
+    this.state = {
+      activeUser: {}
+    }
+  }
+}
 
 export default withRouter(Header);

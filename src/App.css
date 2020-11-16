@@ -90,6 +90,11 @@ Form {
   color: white !important;
   width: 150px !important;
 }
+
+Modal {
+  height: 100vh;
+}
+
 /** @media only screen and (max-width: 300px) {
 
   .registerBtn {

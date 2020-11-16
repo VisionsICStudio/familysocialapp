@@ -16,6 +16,17 @@ export const headerStyle = {
   padding: '0'
 }
 
+export const ColoredLine = ({ color }) => (
+  <hr style={{
+    position: 'relative',
+    top: 0,
+    color: color,
+    backgroundColor: color,
+    height: 5
+    }}
+  />
+);
+
 // Footer.jsx styles.
 
 export const h6Style = {
